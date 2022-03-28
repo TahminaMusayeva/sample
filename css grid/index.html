@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        /* grid-column-gap: 1em;
+        grid-row-gap: 1em; */
+
+        grid-gap: 1em;
+      }
+
+      .wrapper > div {
+        background: red;
+        padding: 1em;
+      }
+      .wrapper > div:nth-child(odd) {
+        background: darkgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        I eat candy while the worldy is slowly dying, if the bomb catches me,
+        I'll be living my best life
+      </div>
+      <div>My candy tastes like radioactive waste, I love it!</div>
+      <div>
+        I eat candy while the worldy is slowly dying, if the bomb catches me,
+        I'll be living my best life
+      </div>
+      <div>My candy tastes like radioactive waste, I love it!</div>
+    </div>
+  </body>
+</html>

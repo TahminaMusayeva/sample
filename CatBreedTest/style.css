@@ -1,0 +1,24 @@
+ol li {
+  counter-increment: muffins;
+  font-weight: bolder;
+}
+ol li:before {
+  content: counter(muffins) ". ";
+}
+ol {
+  list-style: none;
+  counter-reset: muffins;
+}
+
+body {
+  background-image: url(images/background.jpg);
+}
+
+#questions {
+  width: 30%;
+  background-color: white;
+}
+
+.cat {
+  width: 50%;
+}

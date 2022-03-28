@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax 3 - External API</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
+      integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <button id="button">Load GitHub Users</button>
+    <br /><br />
+    <h1>GitHub Users</h1>
+    <div id="users"></div>
+
+    <script>
+      console.log(axios.get("https://api.github.com/users"));
+      document.getElementById("button").addEventListener("click", loadUsers);
+
+      function loadUsers() {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.github.com/users", true);
+
+        xhr.onload = () => {
+          if (xhr.status === 200) {
+            let output = "";
+            const users = JSON.parse(xhr.responseText);
+
+            output = " ";
+            for (let user of users) {
+              output += `<div class='user'>
+              <img src="${user.avatar_url}" width="70" height="70">
+              <ul>
+                <li>ID: ${user.id}</li>
+                <li>Login: ${user.login}</li>
+                </ul>
+                </div>`;
+            }
+            document.getElementById("users").innerHTML = output;
+          }
+        };
+
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>

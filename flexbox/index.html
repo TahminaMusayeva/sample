@@ -1,0 +1,120 @@
+<style>
+  .container-1 {
+    display: none;
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media (min-width: 320px) {
+    .container-1 {
+      display: none;
+    }
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media (min-width: 600px) {
+    .container-1 {
+      display: flex;
+    }
+  }
+
+  .container-2 {
+    display: flex;
+    /*justify-content: center;
+    justify-content: flex-end;
+    justify-content: flex-start;
+    */
+    justify-content: space-between;
+  }
+
+  .container-1 div,
+  .container-2 div,
+  .container-3 div {
+    border: 1px black solid;
+    padding: 10px;
+  }
+
+  .box-1 {
+    flex: 2;
+    order: 2;
+  }
+
+  .box-2 {
+    flex: 1;
+    order: 1;
+  }
+
+  .box-3 {
+    flex: 1;
+    order: 3;
+  }
+
+  .container-2-box {
+    flex-basis: 30%;
+  }
+
+  .container-3 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container-3-box {
+    flex-basis: 15%;
+  }
+</style>
+
+<div class="container-1">
+  <div class="box-1">
+    <h3>Target 1</h3>
+    <p>Putin</p>
+  </div>
+  <div class="box-2">
+    <h3>Target 2</h3>
+    <p>Lavrov</p>
+  </div>
+  <div class="box-3">
+    <h3>Target 3</h3>
+    <p>Peskov</p>
+  </div>
+</div>
+
+<div class="container-2">
+  <div class="container-2-box">
+    <h3>Target 1</h3>
+    <p>Shoygu</p>
+  </div>
+  <div class="container-2-box">
+    <h3>Target 2</h3>
+    <p>Medvedev</p>
+  </div>
+  <div class="container-2-box">
+    <h3>Target 3</h3>
+    <p>Medinskiy</p>
+  </div>
+</div>
+
+<div class="container-3">
+  <div class="container-3-box">
+    <h3>Target 1</h3>
+    <p>Shoygu</p>
+  </div>
+  <div class="container-3-box">
+    <h3>Target 2</h3>
+    <p>Medvedev</p>
+  </div>
+  <div class="container-3-box">
+    <h3>Target 3</h3>
+    <p>Medinskiy</p>
+  </div>
+  <div class="container-3-box">
+    <h3>Target 1</h3>
+    <p>Shoygu</p>
+  </div>
+  <div class="container-3-box">
+    <h3>Target 2</h3>
+    <p>Medvedev</p>
+  </div>
+  <div class="container-3-box">
+    <h3>Target 3</h3>
+    <p>Medinskiy</p>
+  </div>
+</div>

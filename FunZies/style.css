@@ -1,0 +1,9 @@
+.photo {
+  max-height: 300px;
+  border-radius: 50%;
+}
+
+#header {
+  display: flex;
+  background: lightgreen;
+}
